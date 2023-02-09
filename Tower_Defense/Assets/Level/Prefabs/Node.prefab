@@ -69,7 +69,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0135, y: -0.0201}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 1.5884, y: 1.5884}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4540185723206727636
@@ -179,6 +179,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shopCanvas: {fileID: 0}
+  shop: {fileID: 0}
 --- !u!1 &4540185723815771388
 GameObject:
   m_ObjectHideFlags: 0
