@@ -111,7 +111,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -75.784, y: -97.971}
+  m_AnchoredPosition: {x: -65.495, y: -92.492}
   m_SizeDelta: {x: 37.823, y: 39.997}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7228261941282755391
@@ -192,7 +192,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -117.26, y: 176.997}
+  m_AnchoredPosition: {x: 0.0000076294, y: -0.000030518}
   m_SizeDelta: {x: 236.887, y: 266.326}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7228261941388495690
@@ -276,7 +276,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 7228261941388495693}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7228261941388495695}
+        m_TargetAssemblyTypeName: ShopCard, Assembly-CSharp
+        m_MethodName: PlaceTurret
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &7228261941388495695
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -326,7 +338,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -93.10008, y: 35.19201}
+  m_AnchoredPosition: {x: -100.5, y: 40.1}
   m_SizeDelta: {x: 129.055, y: 38.856}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7228261941628639506
@@ -357,7 +369,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 100
+  m_text: value
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

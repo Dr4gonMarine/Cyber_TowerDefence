@@ -9,17 +9,28 @@ public class ShopCard : MonoBehaviour
     [SerializeField] Image towerImage;
     [SerializeField] TextMeshProUGUI towerCost;
 
-   public TowerSettings TowerLoaded { get; set; }
+    public TowerShopManager ShopManager { get; set; }
+
+    public TowerSettings TowerLoaded { get; set; }
+    GameObject pasta;
+
+
+    private void Awake()
+    {
+        pasta = GameObject.Find("----Towers----");
+    }
 
     public void SetupTowerButton(TowerSettings towerSettings)
     {
-        TowerLoaded = towerSettings;
+        TowerLoaded = towerSettings;        
         towerImage.sprite = towerSettings.TowerShopSprite;
         towerCost.text = towerSettings.TowerShopCost.ToString();
     }
 
     public void PlaceTurret()
     {
-        
+        Instantiate(TowerLoaded.TowerPrefab, ShopManager.BtnShop.transform.position, Quaternion.identity, pasta.transform);
+        ShopManager.BtnShop.SetActive(false);
+        ShopManager.CloseShop();
     }
 }

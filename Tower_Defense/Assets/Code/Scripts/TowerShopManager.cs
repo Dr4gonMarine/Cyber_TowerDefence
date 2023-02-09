@@ -5,24 +5,26 @@ using UnityEngine;
 public class TowerShopManager : MonoBehaviour
 {
     [SerializeField] GameObject towerCardPrefab;
+    [SerializeField] GameObject ShopCanvas;
     [SerializeField] GameObject ShopContainer;
+    [HideInInspector] public GameObject BtnShop;
 
     public List<TowerSettings> Towers;
 
     private void Start()
-    {
-        //ShopContainer.SetActive(false);
-        float offset = 0f;        
-
+    {       
+        ShopCanvas.SetActive(false);
         foreach (var item in Towers)
         {
             GameObject card = Instantiate(towerCardPrefab, ShopContainer.transform);            
             var shopCard = card.GetComponent<ShopCard>();
             shopCard.SetupTowerButton(item);
+            shopCard.ShopManager = this;                                               
+        }                    
+    }
 
-            //Set Location
-            card.transform.localPosition = new Vector3(offset, 0f, 0f);            
-            offset += card.GetComponent<RectTransform>().sizeDelta.x;
-        }        
+    public void CloseShop()
+    {
+        ShopCanvas.SetActive(false);
     }
 }

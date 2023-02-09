@@ -5,7 +5,11 @@ using UnityEngine;
 public class LevelManager : MonoBehaviour
 {
     [SerializeField]
-    int Lives;
+    int lives;
+
+    [SerializeField]
+    int money;
+
     public int CurrentWave { get; set; }
 
     void Start()
@@ -15,10 +19,10 @@ public class LevelManager : MonoBehaviour
     
     public void ReduceLives()
     {
-        Lives--;
-        if(Lives <= 0)
+        lives--;
+        if(lives <= 0)
         {
-            Lives = 0;
+            lives = 0;
             GameOver();
         }
     }
@@ -26,6 +30,11 @@ public class LevelManager : MonoBehaviour
     void GameOver()
     {
         Debug.LogWarning("Morreu");
+    }
+
+    public void GetMoney()
+    {
+
     }
 
     void WaveCompleted()
