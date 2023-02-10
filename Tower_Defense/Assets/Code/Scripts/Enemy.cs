@@ -81,7 +81,7 @@ public class Enemy : MonoBehaviour
         _passedPoints = 0;
         _nextLocation = _waypoints.Points[0];
         EnemyHp.ResetHealthBar();
-        _levelManager.GetMoney();
+        _levelManager.GetMoney(10);
         ObjectPooler.RetunToPool(gameObject);        
     }
 

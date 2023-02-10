@@ -29,8 +29,13 @@ public class ShopCard : MonoBehaviour
 
     public void PlaceTurret()
     {
-        Instantiate(TowerLoaded.TowerPrefab, ShopManager.BtnShop.transform.position, Quaternion.identity, pasta.transform);
-        ShopManager.BtnShop.SetActive(false);
-        ShopManager.CloseShop();
+        if(ShopManager.Money >= TowerLoaded.TowerShopCost)
+        {
+            ShopManager.Money -= TowerLoaded.TowerShopCost;
+            ShopManager.SetMoney();
+            Instantiate(TowerLoaded.TowerPrefab, ShopManager.BtnShop.transform.position, Quaternion.identity, pasta.transform);
+            ShopManager.BtnShop.SetActive(false);
+            ShopManager.CloseShop();
+        }
     }
 }

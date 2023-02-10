@@ -6,9 +6,8 @@ public class LevelManager : MonoBehaviour
 {
     [SerializeField]
     int lives;
-
     [SerializeField]
-    int money;
+    TowerShopManager shopManager;
 
     public int CurrentWave { get; set; }
 
@@ -32,9 +31,9 @@ public class LevelManager : MonoBehaviour
         Debug.LogWarning("Morreu");
     }
 
-    public void GetMoney()
+    public void GetMoney(int income)
     {
-
+        shopManager.Money += income;
     }
 
     void WaveCompleted()

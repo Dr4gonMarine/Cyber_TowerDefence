@@ -378,8 +378,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff1f2c05c402c8546a66544646bb3cee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lives: 0
-  money: 0
+  lives: 8
+  shopManager: {fileID: 1562768620}
 --- !u!4 &463519361
 Transform:
   m_ObjectHideFlags: 0
@@ -1186,6 +1186,8 @@ MonoBehaviour:
   towerCardPrefab: {fileID: 7228261941388495697, guid: f7e28105ea693d3428b7eaf3e05c9715, type: 3}
   ShopCanvas: {fileID: 106914106}
   ShopContainer: {fileID: 601258347}
+  UiMoney: {fileID: 2083370977}
+  Money: 200
   BtnShop: {fileID: 0}
   Towers:
   - {fileID: 11400000, guid: 6095e1835759d4341b04d67f7e59b7e5, type: 2}
@@ -1565,7 +1567,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 300
+  m_text: value
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
