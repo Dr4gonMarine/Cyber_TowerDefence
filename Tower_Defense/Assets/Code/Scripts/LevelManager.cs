@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using UnityEngine;
 
 public class LevelManager : MonoBehaviour
@@ -8,14 +9,17 @@ public class LevelManager : MonoBehaviour
     int lives;
     [SerializeField]
     TowerShopManager shopManager;
+    [SerializeField]
+    EnemySpawner enemiesSpawner;
 
     public int CurrentWave { get; set; }
+    public int NumberOfWaves { get; set; }
 
     void Start()
     {                
         CurrentWave = 1;
-    }
-    
+    }   
+
     public void ReduceLives()
     {
         lives--;
@@ -34,11 +38,12 @@ public class LevelManager : MonoBehaviour
     public void GetMoney(int income)
     {
         shopManager.Money += income;
+        shopManager.SetMoney();
     }
 
     void WaveCompleted()
-    {  
-        
+    {
+      
     }
 
     //private void OnEnable()

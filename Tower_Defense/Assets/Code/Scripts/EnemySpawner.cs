@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemySpawner : MonoBehaviour
 {
     [Header("Configuracoes")]
-    public int enemyCount = 10;  
+    public int WaveEnemyCount = 10;   
 
     [Header("Delay")]
     [SerializeField] private float delayBtwSpawns;
@@ -27,10 +27,15 @@ public class EnemySpawner : MonoBehaviour
         if(_spawnerTimer < 0)
         {
             _spawnerTimer = delayBtwSpawns;
-            if(_enemiesSpawned < enemyCount)
+            if(_enemiesSpawned < WaveEnemyCount)
             {
                 _enemiesSpawned++;
                 SpawnEnemy();
+            }
+            else
+            {
+                _enemiesSpawned = 0;
+                WaveEnemyCount = 0;                
             }
         }
     }
