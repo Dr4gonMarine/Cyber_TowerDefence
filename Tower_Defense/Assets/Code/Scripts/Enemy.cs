@@ -6,6 +6,7 @@ public class Enemy : MonoBehaviour
 {
     [SerializeField] float MoveSpeed;    
     [SerializeField] EnemyHP EnemyHp;    
+    [SerializeField] int MoneyDrop;    
     WayPoint _waypoints;    
     LevelManager _levelManager;    
 
@@ -81,7 +82,7 @@ public class Enemy : MonoBehaviour
         _passedPoints = 0;
         _nextLocation = _waypoints.Points[0];
         EnemyHp.ResetHealthBar();
-        _levelManager.GetMoney(50);
+        _levelManager.GetMoney(MoneyDrop);
         ObjectPooler.RetunToPool(gameObject);        
     }
 

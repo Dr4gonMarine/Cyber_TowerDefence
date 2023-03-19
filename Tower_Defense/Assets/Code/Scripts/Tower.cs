@@ -33,6 +33,11 @@ public class Tower : MonoBehaviour
         GetCurrentEnemyTarget();
     }
 
+    public void TurnOff()
+    {
+        _enemies.Clear();
+    }
+
     public Enemy  GetCurrentEnemyTarget()
     {
         if(_enemies.Count <= 0)
