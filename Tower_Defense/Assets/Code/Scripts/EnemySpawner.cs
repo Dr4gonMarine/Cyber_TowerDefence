@@ -17,12 +17,13 @@ public class EnemySpawner : MonoBehaviour
     private int _enemiesSpawned;
     private int _currentWave;
     private bool _preparing = false;
+    private string _lastSpawned;
 
-    private ObjectPooler _pooler;
+    private ObjectPooler[] _pooler;
     void Start()
     {
         _currentWave = 1;
-        _pooler = GetComponent<ObjectPooler>();
+        _pooler = GetComponents<ObjectPooler>();        
     }
 
     
@@ -35,7 +36,13 @@ public class EnemySpawner : MonoBehaviour
             if(_enemiesSpawned < WaveEnemyCount)
             {
                 _enemiesSpawned++;
-                SpawnEnemy();
+                //evita de spawnar 2 vezes seguidas o DDos
+                if(_lastSpawned == "DDos")
+                    SpawnEnemy(0);
+                else{
+                    int index = Random.Range(0, _pooler.Length);
+                    SpawnEnemy(index);
+                }                    
             }
             else
             {
@@ -59,9 +66,10 @@ public class EnemySpawner : MonoBehaviour
         }
     }
 
-    void SpawnEnemy()
-    {
-        GameObject newInstace = _pooler.GetInstaceFromPool();
+    void SpawnEnemy(int index)
+    {     
+        _lastSpawned = _pooler[index].poolName;                        
+        GameObject newInstace = _pooler[index].GetInstaceFromPool();
         newInstace.transform.position = transform.position;
         newInstace.SetActive(true);
     }

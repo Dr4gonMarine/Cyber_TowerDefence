@@ -8,12 +8,12 @@ public class LevelManager : MonoBehaviour
     [SerializeField] int lives = 10;
     TowerShopManager shopManager;
     EnemySpawner enemiesSpawner;
-
+    
     public int CurrentWave { get; set; }
     public int NumberOfWaves { get; set; }
 
     void Start()
-    {                
+    {                        
         CurrentWave = 1;
         shopManager = FindObjectOfType<TowerShopManager>();
         enemiesSpawner = FindObjectOfType<EnemySpawner>();

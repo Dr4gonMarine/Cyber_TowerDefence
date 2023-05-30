@@ -6,6 +6,7 @@ public class ObjectPooler : MonoBehaviour
 {
     [SerializeField] private GameObject prefab;
     [SerializeField] private int poolSize = 10;
+    public string poolName{get => prefab.name;}
     private List<GameObject> _pool;
     private GameObject _poolContainer;
 

@@ -6,16 +6,16 @@ using UnityEngine;
 public class Tower : MonoBehaviour
 {
     [SerializeField]
-    List<Enemy> _enemies;
+    List<Enemy> _enemiesInRange;
+    public int NumDDosEffects = 0;
+    Enemy CurrentEnemy;    
 
-    Enemy CurrentEnemy;
-    public bool isEnable = true;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Enemy") && isEnable)
+        if (collision.CompareTag("Enemy"))
         {
-            _enemies.Add(collision.GetComponent<Enemy>());
+            _enemiesInRange.Add(collision.GetComponent<Enemy>());
         }
     }
 
@@ -24,8 +24,8 @@ public class Tower : MonoBehaviour
         if (collision.CompareTag("Enemy"))
         {
             Enemy enemy = collision.GetComponent<Enemy>();
-            if (_enemies.Contains(enemy))
-                _enemies.Remove(enemy);
+            if (_enemiesInRange.Contains(enemy))
+                _enemiesInRange.Remove(enemy);
         }
     }   
 
@@ -37,23 +37,23 @@ public class Tower : MonoBehaviour
 
     public Enemy  GetCurrentEnemyTarget()
     {
-        if(_enemies.Count <= 0)
+        if(_enemiesInRange.Count <= 0)
         {
             CurrentEnemy = null;
             return null;
         }
-        CurrentEnemy = _enemies[0];
+        CurrentEnemy = _enemiesInRange[0];
         return CurrentEnemy;
     }
 
-    internal void TurnOn()
+    public void AddDDosEffect()
     {
-        isEnable = false;
+       NumDDosEffects++;
     }
 
-     public void TurnOff()
+     public void RemoveDDosEffect()
     {
-        isEnable = false;        
+        NumDDosEffects--;   
     }
 
     //void RotateTowardsTarget()
