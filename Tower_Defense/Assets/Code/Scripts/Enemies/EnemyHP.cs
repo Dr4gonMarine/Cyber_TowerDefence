@@ -5,10 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class EnemyHP : MonoBehaviour
-{
-    //public static Action<Enemy> OnEnemyKilled;
-    //public static Action<Enemy> OnEnemyHit;
-
+{    
     [SerializeField] private Image healthBar;        
             
     [SerializeField] private float maxHealth = 100f;    
@@ -30,7 +27,7 @@ public class EnemyHP : MonoBehaviour
         healthBar.fillAmount = 1;
     }
 
-    public void DealDamage(float damageReceived)
+    public void TakeDamage(float damageReceived)
     {
         CurrentHealth -= damageReceived;
         if(CurrentHealth <= 0)

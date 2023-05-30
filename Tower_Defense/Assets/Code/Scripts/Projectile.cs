@@ -22,8 +22,8 @@ public class Projectile : MonoBehaviour
     {
         if (collision.CompareTag("Enemy"))
         {
-            EnemyHP enemy = collision.GetComponent<EnemyHP>();
-            enemy.DealDamage(Damage);
+            Enemy enemy = collision.GetComponent<Enemy>();
+            enemy.TakeDamage(Damage);
             ObjectPooler.RetunToPool(gameObject);
         }
     }

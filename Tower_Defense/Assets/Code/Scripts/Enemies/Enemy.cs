@@ -1,0 +1,134 @@
+using UnityEngine;
+using UnityEngine.UI;
+
+#region require components
+[RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent(typeof(SpriteRenderer))]
+#endregion
+
+
+[DisallowMultipleComponent]
+public class Enemy : MonoBehaviour
+{
+    public EnemyDetails enemyDetails;
+    Image _healthBar; 
+    float _currentHealth;
+    private SpriteRenderer _spriteRenderer;
+    WayPoint _waypoints;    
+    LevelManager _levelManager;    
+    int _passedPoints = 0;    
+    Vector3 _nextLocation;     
+
+    void Start()
+    {
+        //Pegando informa��es b�sicas
+        _currentHealth = enemyDetails.maxHealth;
+
+        _spriteRenderer = GetComponent<SpriteRenderer>();
+        //Pegando o sprite do inimigo
+        _spriteRenderer.sprite = enemyDetails.enemySprite;
+        //Pegando o tamanho do sprite
+        Vector3 novoTamanho = new Vector3(0.5f, 0.5f, 1f); // Novo tamanho 2x maior            
+        transform.localScale = novoTamanho;
+        
+        _waypoints = FindObjectOfType<WayPoint>();
+        _levelManager = FindObjectOfType<LevelManager>();         
+        _healthBar = GetComponentInChildren<Image>();
+
+        _nextLocation = _waypoints.Points[_passedPoints];
+    }   
+
+    void Update()
+    {
+        Move();
+        //Rotate();
+
+        //if (CurrentPointPositionReached())
+        //    UpdateCurrentPointIndex();
+    }
+
+    //Gerenciando movimenta��o
+    #region Movement
+    private void Move()
+    {
+        if(transform.position == _nextLocation)
+        {
+            _passedPoints++;
+            if(_waypoints.Points.Length == _passedPoints)            
+                EndPointReached();            
+            else            
+                _nextLocation = _waypoints.Points[_passedPoints];            
+        }
+        transform.position = Vector3.MoveTowards(transform.position, _nextLocation, enemyDetails.moveSpeed * Time.deltaTime);
+                
+    }
+    //void Rotate()
+    //{
+    //    if (CurrentPointPosition.x > _lastPointPosition.x)
+    //        _spriteRenderer.flipX = false;
+    //    else
+    //        _spriteRenderer.flipX = true;
+    //}
+    //bool CurrentPointPositionReached()
+    //{
+    //    float distanceToNextPointPosition = (transform.position - CurrentPointPosition).magnitude;
+    //    if (distanceToNextPointPosition < 0.1f)
+    //    {
+    //        _lastPointPosition = transform.position;
+    //        return true;
+    //    }
+    //    return false;
+    //}
+
+    //void UpdateCurrentPointIndex()
+    //{
+    //    int lastWaypointIndex = WayPoint.Points.Length - 1;
+    //    if (_currentWaypointIndex < lastWaypointIndex)
+    //        _currentWaypointIndex++;
+    //    else
+    //        EndPointReached();
+    //}
+
+    public void EndPointReached()
+    {
+        _passedPoints = 0;
+        _nextLocation = _waypoints.Points[0];
+        ResetHealthBar();
+        ObjectPooler.RetunToPool(gameObject);
+
+        _levelManager.ReduceLives();
+    }
+    #endregion
+
+    //Gerenciando a vida do inimigo
+    #region EnemyHP
+    public void TakeDamage(float damageReceived)
+    {
+        _currentHealth -= damageReceived;
+        if (_currentHealth <= 0)
+        {
+            Die();
+        }
+        else
+        {
+            _healthBar.fillAmount = (_currentHealth / enemyDetails.maxHealth);
+        }
+    }
+
+     public void ResetHealthBar()
+    {
+        _currentHealth = enemyDetails.maxHealth;
+        _healthBar.fillAmount = 1;
+    }
+
+    public void Die()
+    {
+        _passedPoints = 0;
+        _nextLocation = _waypoints.Points[0];
+        ResetHealthBar();
+        _levelManager.GetMoney(enemyDetails.moneyDrop);
+        ObjectPooler.RetunToPool(gameObject);        
+    }
+
+  #endregion
+}

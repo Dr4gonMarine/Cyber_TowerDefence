@@ -378,9 +378,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff1f2c05c402c8546a66544646bb3cee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lives: 8
-  shopManager: {fileID: 1562768620}
-  enemiesSpawner: {fileID: 1675540568}
+  lives: 10
 --- !u!4 &463519361
 Transform:
   m_ObjectHideFlags: 0
@@ -1285,7 +1283,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82ec24fa41be4984d9e207f6a3c07adb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: 1432060772948227423, guid: 1c3b91ccef31b114cbbfe7f00b36dafb, type: 3}
+  prefab: {fileID: 3088828031509322322, guid: 7b5ca7485e3414f42b3130a70cb7e482, type: 3}
   poolSize: 10
 --- !u!1 &1849360761
 GameObject:

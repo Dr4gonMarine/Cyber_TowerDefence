@@ -5,11 +5,8 @@ using UnityEngine;
 
 public class LevelManager : MonoBehaviour
 {
-    [SerializeField]
-    int lives;
-    [SerializeField]
+    [SerializeField] int lives = 10;
     TowerShopManager shopManager;
-    [SerializeField]
     EnemySpawner enemiesSpawner;
 
     public int CurrentWave { get; set; }
@@ -18,6 +15,8 @@ public class LevelManager : MonoBehaviour
     void Start()
     {                
         CurrentWave = 1;
+        shopManager = FindObjectOfType<TowerShopManager>();
+        enemiesSpawner = FindObjectOfType<EnemySpawner>();
     }   
 
     public void ReduceLives()
