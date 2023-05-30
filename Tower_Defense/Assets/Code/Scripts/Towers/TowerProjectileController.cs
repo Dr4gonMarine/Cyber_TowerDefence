@@ -15,7 +15,7 @@ public class TowerProjectileController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (_tower.GetCurrentEnemyTarget() != null)
+        if (_tower.GetCurrentEnemyTarget() != null && _tower.isEnable)
             LoadProjectiles();
     }
 

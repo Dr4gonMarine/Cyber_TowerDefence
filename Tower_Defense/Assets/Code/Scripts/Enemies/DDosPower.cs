@@ -4,17 +4,21 @@ using UnityEngine;
 
 public class DDosPower : MonoBehaviour
 {     
-    void Update()
-    {
-        
-    }
-
+   
     private void OnTriggerEnter2D(Collider2D collision)
     {        
         if (collision.CompareTag("Tower"))
         {
-            Tower torre = collision.transform.root.GetComponentInChildren<Tower>();
+            Tower torre = collision.GetComponentInChildren<Tower>();
             torre.TurnOff();
+        }
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Tower"))
+        {
+            Tower torre = collision.GetComponentInChildren<Tower>();
+            torre.TurnOn();
         }
     }
 }
