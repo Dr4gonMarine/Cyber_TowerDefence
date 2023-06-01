@@ -3,16 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class TowerProjectileController : MonoBehaviour
-{
-    [SerializeField] float _fireRate;
-    [SerializeField] float _damage;
-    [SerializeField] Tower _tower;
-    [SerializeField] ObjectPooler _pool;
+{    
+    private Tower _tower;
+    private ObjectPooler _pool;
 
     protected float _nextAttkTime;       
     Projectile _currentProjectileLoaded;   
+    
+    private void Awake()
+    {
+        _tower = GetComponent<Tower>();
+        _pool = GetComponent<ObjectPooler>();
+    }
 
-    // Update is called once per frame
     void Update()
     {
         if (_tower.GetCurrentEnemyTarget() != null && _tower.NumDDosEffects == 0)
@@ -28,7 +31,7 @@ public class TowerProjectileController : MonoBehaviour
             _currentProjectileLoaded = newInstace.GetComponent<Projectile>();
             _currentProjectileLoaded.transform.position = transform.position;
             _currentProjectileLoaded._enemyTarget = _tower.GetCurrentEnemyTarget();
-            _nextAttkTime = Time.time + _fireRate;
+            _nextAttkTime = Time.time + _tower.FireRate;
         }
     }
 }

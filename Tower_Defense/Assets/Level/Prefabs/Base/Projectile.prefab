@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: 90b0d7d8da4c2284db11164a51f28a9c, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -83,7 +83,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &33534603397219252
@@ -98,9 +98,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e480a3b1c086ea49a16f5e5de31f6c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 10
   _enemyTarget: {fileID: 0}
-  Damage: 40
+  _projectilesSettings: {fileID: 0}
 --- !u!61 &927425369036619987
 BoxCollider2D:
   m_ObjectHideFlags: 0

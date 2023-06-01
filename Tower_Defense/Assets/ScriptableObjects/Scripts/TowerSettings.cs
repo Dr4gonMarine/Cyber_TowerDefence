@@ -9,4 +9,6 @@ public class TowerSettings : ScriptableObject
     public GameObject TowerPrefab;
     public int TowerShopCost;
     public Sprite TowerShopSprite;   
+    public float FireRate;
+    public float Range;
 }

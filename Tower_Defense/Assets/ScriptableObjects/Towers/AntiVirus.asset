@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7aed2e6f84b4e004688ff63ebd56ee28, type: 3}
   m_Name: AntiVirus
   m_EditorClassIdentifier: 
-  TowerPrefab: {fileID: 7911295189793259238, guid: 7e818e61169e33245b510b59a6829326, type: 3}
+  TowerPrefab: {fileID: 9166989982659451440, guid: b0b0a7dc9179ad94688919c4054cba15, type: 3}
   TowerShopCost: 100
   TowerShopSprite: {fileID: 21300000, guid: a6fab55bbc758ce40b2534f9bc2b3cb3, type: 3}
+  FireRate: 2
+  Range: 16

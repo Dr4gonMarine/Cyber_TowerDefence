@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class ObjectPooler : MonoBehaviour
 {
+    [Header("------Prefab da Pool------")]
     [SerializeField] private GameObject prefab;
     [SerializeField] private int poolSize = 10;
+
     public string poolName{get => prefab.name;}
     private List<GameObject> _pool;
     private GameObject _poolContainer;

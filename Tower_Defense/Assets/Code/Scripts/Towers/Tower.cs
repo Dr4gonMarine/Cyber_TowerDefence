@@ -5,10 +5,19 @@ using UnityEngine;
 
 public class Tower : MonoBehaviour
 {
-    [SerializeField]
-    List<Enemy> _enemiesInRange;
+    [SerializeField] TowerSettings _towerSettings;
+    [SerializeField] List<Enemy> _enemiesInRange;
+    
+    public float Range {get => _towerSettings.Range; }
+    public float FireRate {get => _towerSettings.FireRate; }
     public int NumDDosEffects = 0;
     Enemy CurrentEnemy;    
+
+    private void Awake()
+    {
+        CircleCollider2D range = GetComponent<CircleCollider2D>();
+        range.radius = Range;
+    }
 
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -29,7 +38,6 @@ public class Tower : MonoBehaviour
         }
     }   
 
-    // Update is called once per frame
     void Update()
     {
         GetCurrentEnemyTarget();

@@ -4,18 +4,18 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
-
-    [SerializeField] float moveSpeed = 1f;    
-
     [HideInInspector]
     public Enemy _enemyTarget;
-
-    public float Damage;       
+    
+    [SerializeField]
+    ProjectilesSettings _projectilesSettings;
 
     void Update()
     {
-        if(_enemyTarget != null)
+        if(_enemyTarget != null && _enemyTarget.gameObject.activeSelf)
             MoveProjectile();
+        else
+            ObjectPooler.RetunToPool(gameObject);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -23,13 +23,13 @@ public class Projectile : MonoBehaviour
         if (collision.CompareTag("Enemy"))
         {
             Enemy enemy = collision.GetComponent<Enemy>();
-            enemy.TakeDamage(Damage);
+            enemy.TakeDamage(_projectilesSettings.Damage);
             ObjectPooler.RetunToPool(gameObject);
         }
     }
 
     void MoveProjectile()
     {            
-        transform.position = Vector3.MoveTowards(transform.position, _enemyTarget.transform.position , moveSpeed * Time.deltaTime);
+        transform.position = Vector3.MoveTowards(transform.position, _enemyTarget.transform.position , _projectilesSettings.MoveSpeed * Time.deltaTime);
     }
 }
