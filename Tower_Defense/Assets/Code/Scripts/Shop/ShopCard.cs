@@ -24,7 +24,7 @@ public class ShopCard : MonoBehaviour
     {
         TowerLoaded = towerSettings;        
         towerImage.sprite = towerSettings.TowerShopSprite;
-        towerCost.text = towerSettings.TowerShopCost.ToString();
+        towerCost.text = towerSettings.TowerShopCost.ToString();       
     }
 
     public void PlaceTurret()
@@ -33,7 +33,8 @@ public class ShopCard : MonoBehaviour
         {
             ShopManager.Money -= TowerLoaded.TowerShopCost;
             ShopManager.SetMoney();
-            Instantiate(TowerLoaded.TowerPrefab, ShopManager.BtnShop.transform.position, Quaternion.identity, pasta.transform);
+            var Tower = Instantiate(TowerLoaded.TowerPrefab, ShopManager.BtnShop.transform.position, Quaternion.identity, pasta.transform);
+            Tower.GetComponent<Tower>().RelatedNode = ShopManager.BtnShop;
             ShopManager.BtnShop.SetActive(false);
             ShopManager.CloseShop();
         }

@@ -11,4 +11,5 @@ public class TowerSettings : ScriptableObject
     public Sprite TowerShopSprite;   
     public float FireRate;
     public float Range;
+    public int SellPrice;
 }

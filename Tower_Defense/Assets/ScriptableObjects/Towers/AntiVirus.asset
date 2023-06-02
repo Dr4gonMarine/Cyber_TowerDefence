@@ -17,3 +17,4 @@ MonoBehaviour:
   TowerShopSprite: {fileID: 21300000, guid: a6fab55bbc758ce40b2534f9bc2b3cb3, type: 3}
   FireRate: 2
   Range: 16
+  SellPrice: 75
