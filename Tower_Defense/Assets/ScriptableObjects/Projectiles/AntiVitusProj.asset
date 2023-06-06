@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: AntiVitusProj
   m_EditorClassIdentifier: 
   Damage: 40
-  MoveSpeed: 10
+  MoveSpeed: 3
