@@ -1,13 +1,13 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Threading.Tasks;
 using UnityEngine;
 
 public class LevelManager : MonoBehaviour
 {
     [SerializeField] int lives = 10;
     TowerShopManager shopManager;
-    EnemySpawner enemiesSpawner;
+    EnemySpawner enemiesSpawner;    
+    [SerializeField] GameObject HpGameObject;
+    HpController _hpController;
+
     
     public int CurrentWave { get; set; }
     public int NumberOfWaves { get; set; }
@@ -17,11 +17,14 @@ public class LevelManager : MonoBehaviour
         CurrentWave = 1;
         shopManager = FindObjectOfType<TowerShopManager>();
         enemiesSpawner = FindObjectOfType<EnemySpawner>();
+        _hpController = HpGameObject.GetComponent<HpController>();
+        _hpController.SetMaxHealth(lives);
     }   
 
     public void ReduceLives()
     {
         lives--;
+        _hpController.SetHealth(lives);
         if(lives <= 0)
         {
             lives = 0;
