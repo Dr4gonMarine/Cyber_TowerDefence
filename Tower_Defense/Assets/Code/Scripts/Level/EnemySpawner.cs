@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
+    [SerializeField] private LevelManager _levelManager;
+
     [Header("Configuracoes")]
     public int WaveEnemyCount = 10;   
     public int MaxWaves = 3;   
@@ -63,6 +65,9 @@ public class EnemySpawner : MonoBehaviour
             _currentWave++;
             WaveEnemyCount = 10;
             _preparing = false;
+        }else{
+            _levelManager.Victory();
+            Debug.Log("Fim de jogo");
         }
     }
 

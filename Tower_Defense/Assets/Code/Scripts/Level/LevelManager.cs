@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class LevelManager : MonoBehaviour
 {
+    [SerializeField] GameObject VictoryPanel;
+    [SerializeField] GameObject DefeatPanel; 
     [SerializeField] int lives = 10;
     TowerShopManager shopManager;
     EnemySpawner enemiesSpawner;    
@@ -34,7 +36,12 @@ public class LevelManager : MonoBehaviour
 
     void GameOver()
     {
-        Debug.LogWarning("Morreu");
+        DefeatPanel.SetActive(true);
+    }
+
+    public void Victory()
+    {
+        VictoryPanel.SetActive(true);
     }
 
     public void GetMoney(int income)
