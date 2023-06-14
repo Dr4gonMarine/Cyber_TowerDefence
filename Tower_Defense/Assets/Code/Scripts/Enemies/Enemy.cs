@@ -13,24 +13,20 @@ public class Enemy : MonoBehaviour
     public EnemyDetails enemyDetails;
     Image _healthBar; 
     float _currentHealth;
-    private SpriteRenderer _spriteRenderer;
+    //private SpriteRenderer _spriteRenderer;
     WayPoint _waypoints;    
     LevelManager _levelManager;    
     int _passedPoints = 0;    
     Vector3 _nextLocation;     
+    public bool visible = true;
+    [HideInInspector] public float MoveSpeed;
 
     void Start()
     {
         //Pegando informa��es b�sicas
         _currentHealth = enemyDetails.maxHealth;
-
-        _spriteRenderer = GetComponent<SpriteRenderer>();
-        //Pegando o sprite do inimigo
-        _spriteRenderer.sprite = enemyDetails.enemySprite;
-        //Pegando o tamanho do sprite
-        Vector3 novoTamanho = new Vector3(0.5f, 0.5f, 1f); // Novo tamanho 2x maior            
-        transform.localScale = novoTamanho;
-        
+             
+        MoveSpeed = enemyDetails.moveSpeed;        
         _waypoints = FindObjectOfType<WayPoint>();
         _levelManager = FindObjectOfType<LevelManager>();         
         _healthBar = GetComponentInChildren<Image>();
@@ -59,7 +55,7 @@ public class Enemy : MonoBehaviour
             else            
                 _nextLocation = _waypoints.Points[_passedPoints];            
         }
-        transform.position = Vector3.MoveTowards(transform.position, _nextLocation, enemyDetails.moveSpeed * Time.deltaTime);
+        transform.position = Vector3.MoveTowards(transform.position, _nextLocation, MoveSpeed * Time.deltaTime);
                 
     }
     //void Rotate()

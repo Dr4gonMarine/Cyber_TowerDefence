@@ -20,7 +20,8 @@ public class TowerProjectileController : MonoBehaviour
     }
     void Update()
     {
-        if (GetCurrentEnemyTarget() != null && _tower.NumDDosEffects == 0)
+        GetCurrentEnemyTarget();
+        if (CurrentEnemy != null && _tower.NumDDosEffects == 0 && CurrentEnemy.visible)
             LoadProjectiles();
     }
 
@@ -30,9 +31,18 @@ public class TowerProjectileController : MonoBehaviour
         {
             CurrentEnemy = null;
             return null;
+        }else{           
+                foreach (Enemy enemy in _enemiesInRange)
+                {
+                    if (enemy.visible)
+                    {
+                        CurrentEnemy = enemy;
+                        return CurrentEnemy;
+                    }
+                }            
+            CurrentEnemy = _enemiesInRange[0];
+            return CurrentEnemy;            
         }
-        CurrentEnemy = _enemiesInRange[0];
-        return CurrentEnemy;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

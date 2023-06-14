@@ -6,14 +6,14 @@ using UnityEngine;
 public class Tower : MonoBehaviour
 {
     [SerializeField] TowerSettings _towerSettings;
-    [SerializeField] GameObject _detailManager;
+    [HideInInspector] GameObject _detailManager;
     private TowerDetailManager _detailManagerScript;
 
-    public float Range { get => _towerSettings.Range; }
-    public float FireRate { get => _towerSettings.FireRate; }
-    public int SellPrice { get => _towerSettings.SellPrice; }
+    [HideInInspector]public float Range { get => _towerSettings.Range; }
+    public float FireRate;
+    [HideInInspector] public int SellPrice { get => _towerSettings.SellPrice; }
     public int NumDDosEffects = 0;
-    public GameObject RelatedNode; 
+    [HideInInspector] public GameObject RelatedNode; 
 
     private void Awake()
     {
@@ -21,6 +21,7 @@ public class Tower : MonoBehaviour
         _detailManager = GameObject.Find("TowerDetailManager");
         _detailManagerScript = _detailManager.GetComponent<TowerDetailManager>();
 
+        FireRate = _towerSettings.FireRate;
         CircleCollider2D range = GetComponentInChildren<CircleCollider2D>();
         range.radius = Range;
     }
