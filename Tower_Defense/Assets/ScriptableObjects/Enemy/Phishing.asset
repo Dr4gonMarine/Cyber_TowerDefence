@@ -9,8 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8df6069aa80be58479f9cc4fdbf9a0f6, type: 3}
-  m_Name: AntiVitusProj
+  m_Script: {fileID: 11500000, guid: 0cf06a8b92e056b4eaf9c1b7b4dcdc46, type: 3}
+  m_Name: Phishing
   m_EditorClassIdentifier: 
-  Damage: 30
-  MoveSpeed: 3
+  enemyName: Phishing
+  moveSpeed: 5
+  maxHealth: 45
+  moneyDrop: 10
+  enemySprite: {fileID: 21300000, guid: 326918bdd4142404082ae5d5b5e344f0, type: 3}

@@ -93,6 +93,11 @@ public class Enemy : MonoBehaviour
         ObjectPooler.RetunToPool(gameObject);
 
         _levelManager.ReduceLives();
+
+        if(enemyDetails.name == "Phishing")
+        {
+            _levelManager.LoseMoney(100);
+        }
     }
     #endregion
 

@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7aed2e6f84b4e004688ff63ebd56ee28, type: 3}
+  m_Name: AuthDoisFatores
+  m_EditorClassIdentifier: 
+  TowerPrefab: {fileID: 723152490160768348, guid: 9ae7d834077a237488cbb5c068d47806, type: 3}
+  TowerShopCost: 400
+  TowerShopSprite: {fileID: 21300000, guid: d5ac506b35cab0f48be04fbd441aa36d, type: 3}
+  FireRate: 1
+  Range: 3.5
+  SellPrice: 375

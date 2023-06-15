@@ -50,6 +50,21 @@ public class LevelManager : MonoBehaviour
         shopManager.SetMoney();
     }
 
+    public void LoseMoney(int value)
+    {
+        GameObject authDoisFatores = GameObject.Find("AuthDoisFatores(Clone)");
+
+        if (authDoisFatores != null)
+        {
+            return;
+        }
+        else
+        {
+            shopManager.Money -= value;
+            shopManager.SetMoney();
+        }        
+    }
+
     void WaveCompleted()
     {
       
