@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class TowerDetailManager : MonoBehaviour
 {  
-    [SerializeField] GameObject DetailCanvas;
-    [SerializeField] GameObject DetailContainer;       
+    [SerializeField] GameObject DetailCanvas;       
     LevelManager _levelManager;
     private Tower _tower;
 

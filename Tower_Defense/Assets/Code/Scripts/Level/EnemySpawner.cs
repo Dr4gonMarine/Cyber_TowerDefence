@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class EnemySpawner : MonoBehaviour
 {
+    #region Propriedades
     [SerializeField] private LevelManager _levelManager;
 
     [Header("Configuracoes")]
@@ -20,9 +21,11 @@ public class EnemySpawner : MonoBehaviour
     private int _enemiesSpawned;
     private int _currentWave;
     private bool _preparing = false;
-    private string _lastSpawned;
-
+    private string _lastSpawned;    
+    private float _delayBtwWaves = 15f;
     private ObjectPooler[] _pooler;
+
+    #endregion
     void Start()
     {
         _currentWave = 2;
@@ -105,20 +108,36 @@ public class EnemySpawner : MonoBehaviour
         }
     }
      private void SpawnerScene3(){
-        //evita de spawnar 2 vezes seguidas o DDos
-        if(_lastSpawned == "DDos")
-            SpawnEnemy(0);
-        else{            
-            SpawnEnemy(Random.Range(0, _pooler.Length));
-        }   
+
+         switch(_currentWave){
+            case 1:
+                StartCoroutine(SpawnEnemiesWithDelay(0));
+                break;
+
+            case 2:
+                if(_lastSpawned == "DDos")
+                    StartCoroutine(SpawnEnemiesWithDelay(0));
+                else{       
+                    int index = Random.Range(0, 1);      
+                    if (index == 0)
+                        StartCoroutine(SpawnEnemiesWithDelay(0));
+                    else
+                        SpawnEnemy(index);
+                    }                                       
+                break;
+                
+            case 3:                
+                SpawnEnemy(Random.Range(0, _pooler.Length));
+                break;            
+        }     
     }
 
-    private IEnumerator SpawnEnemiesWithDelay()
+    private IEnumerator SpawnEnemiesWithDelay(int enemyIndex = 1)
     {
         int groupSize = 4;
         for (int i = 0; i < groupSize; i++)
         {
-            SpawnEnemy(1);
+            SpawnEnemy(enemyIndex);
             yield return new WaitForSeconds(0.5f);
         }
     }
@@ -128,7 +147,8 @@ public class EnemySpawner : MonoBehaviour
         if(_currentWave < MaxWaves)
         {
             _preparing = true;
-            await Task.Delay(30000);
+            _levelManager.WaveCompleted(); 
+            await Task.Delay(15000);
             _currentWave++;
             WaveEnemyCount = 10;
             _preparing = false;

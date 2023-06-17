@@ -12,8 +12,7 @@ public class Enemy : MonoBehaviour
 {
     public EnemyDetails enemyDetails;
     Image _healthBar; 
-    float _currentHealth;
-    //private SpriteRenderer _spriteRenderer;
+    float _currentHealth;    
     WayPoint _waypoints;    
     LevelManager _levelManager;    
     int _passedPoints = 0;    
@@ -97,6 +96,9 @@ public class Enemy : MonoBehaviour
         if(enemyDetails.name == "Phishing")
         {
             _levelManager.LoseMoney(100);
+        }else if(enemyDetails.name == "RansomWare")
+        {
+            _levelManager.RamsomwareActive = true;
         }
     }
     #endregion

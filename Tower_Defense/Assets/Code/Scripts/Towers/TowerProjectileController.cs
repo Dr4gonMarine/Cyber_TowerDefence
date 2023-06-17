@@ -6,6 +6,7 @@ public class TowerProjectileController : MonoBehaviour
 {
     private Tower _tower;
     private ObjectPooler _pool;
+    LevelManager _levelManager;
 
     Enemy CurrentEnemy;
     [SerializeField] List<Enemy> _enemiesInRange;
@@ -15,13 +16,14 @@ public class TowerProjectileController : MonoBehaviour
 
     private void Awake()
     {
+        _levelManager = FindObjectOfType<LevelManager>();
         _tower = GetComponentInParent<Tower>();
         _pool = GetComponent<ObjectPooler>();
     }
     void Update()
     {
         GetCurrentEnemyTarget();
-        if (CurrentEnemy != null && _tower.NumDDosEffects == 0 && CurrentEnemy.visible)
+        if (CurrentEnemy != null && _tower.NumDDosEffects == 0 && CurrentEnemy.visible && !_levelManager.RamsomwareActive)
             LoadProjectiles();
     }
 
