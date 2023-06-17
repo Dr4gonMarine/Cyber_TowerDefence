@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EnemySpawner : MonoBehaviour
 {
@@ -24,8 +25,8 @@ public class EnemySpawner : MonoBehaviour
     private ObjectPooler[] _pooler;
     void Start()
     {
-        _currentWave = 1;
-        _pooler = GetComponents<ObjectPooler>();        
+        _currentWave = 2;
+        _pooler = GetComponents<ObjectPooler>();               
     }
 
     
@@ -36,15 +37,19 @@ public class EnemySpawner : MonoBehaviour
         {
             _spawnerTimer = delayBtwSpawns;
             if(_enemiesSpawned < WaveEnemyCount)
-            {
-                _enemiesSpawned++;
-                //evita de spawnar 2 vezes seguidas o DDos
-                if(_lastSpawned == "DDos")
-                    SpawnEnemy(0);
-                else{
-                    int index = Random.Range(0, _pooler.Length);
-                    SpawnEnemy(index);
-                }                    
+            {    
+                _enemiesSpawned++;                           
+                switch(SceneManager.GetActiveScene().name){
+                    case "Fase_1":
+                        SpawnerScene1();
+                        break;
+                    case "Fase_2":
+                        SpawnerScene2();
+                        break;
+                    case "Fase_3":
+                        SpawnerScene3();
+                        break;
+                }
             }
             else
             {
@@ -53,6 +58,68 @@ public class EnemySpawner : MonoBehaviour
                 if(!_preparing)
                     PrepareNextWave().GetAwaiter();
             }
+        }
+    }
+
+    private void SpawnerScene1(){
+        switch(_currentWave){
+            case 1:
+                SpawnEnemy(0);
+                break;
+
+            case 2:
+                if(_lastSpawned == "CavaloTroia")
+                    SpawnEnemy(0);
+                else{                   
+                    SpawnEnemy(Random.Range(0, _pooler.Length));
+                    }
+                break;
+
+            case 3:                
+                SpawnEnemy(Random.Range(0, _pooler.Length));
+                break;            
+        }
+        
+    }
+     private void SpawnerScene2(){
+          switch(_currentWave){
+            case 1:
+                SpawnEnemy(0);
+                break;
+
+            case 2:
+                if(_lastSpawned == "Spam")
+                    SpawnEnemy(0);
+                else{       
+                    int index = Random.Range(0, _pooler.Length);      
+                    if (index == 0)
+                        SpawnEnemy(index);
+                    else
+                        StartCoroutine(SpawnEnemiesWithDelay());
+                    }                                       
+                break;
+                
+            case 3:                
+                SpawnEnemy(Random.Range(0, _pooler.Length));
+                break;            
+        }
+    }
+     private void SpawnerScene3(){
+        //evita de spawnar 2 vezes seguidas o DDos
+        if(_lastSpawned == "DDos")
+            SpawnEnemy(0);
+        else{            
+            SpawnEnemy(Random.Range(0, _pooler.Length));
+        }   
+    }
+
+    private IEnumerator SpawnEnemiesWithDelay()
+    {
+        int groupSize = 4;
+        for (int i = 0; i < groupSize; i++)
+        {
+            SpawnEnemy(1);
+            yield return new WaitForSeconds(0.5f);
         }
     }
 
@@ -72,7 +139,7 @@ public class EnemySpawner : MonoBehaviour
     }
 
     void SpawnEnemy(int index)
-    {     
+    {            
         _lastSpawned = _pooler[index].poolName;                        
         GameObject newInstace = _pooler[index].GetInstaceFromPool();
         newInstace.transform.position = transform.position;

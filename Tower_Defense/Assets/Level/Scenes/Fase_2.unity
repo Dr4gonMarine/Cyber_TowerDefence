@@ -2403,6 +2403,7 @@ GameObject:
   - component: {fileID: 1675540569}
   - component: {fileID: 1675540568}
   - component: {fileID: 1675540571}
+  - component: {fileID: 1675540572}
   m_Layer: 0
   m_Name: Spawner
   m_TagString: Untagged
@@ -2455,6 +2456,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 529927416585908356, guid: b2c25e852f2a2a2479758e683588e791, type: 3}
   poolSize: 10
+--- !u!114 &1675540572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1675540567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82ec24fa41be4984d9e207f6a3c07adb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 2921297310658114992, guid: 2ede5e187ac1b1d49ba0ff054e601b16, type: 3}
+  poolSize: 16
 --- !u!1 &1709658801
 GameObject:
   m_ObjectHideFlags: 0
