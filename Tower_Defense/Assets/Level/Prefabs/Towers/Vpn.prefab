@@ -7,9 +7,61 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3571282948742320244, guid: 79fd05e4814e063458a146f0a1d9a909, type: 3}
+      propertyPath: m_Size.x
+      value: 0.32
+      objectReference: {fileID: 0}
+    - target: {fileID: 3571282948742320244, guid: 79fd05e4814e063458a146f0a1d9a909, type: 3}
+      propertyPath: m_Size.y
+      value: 0.32
+      objectReference: {fileID: 0}
+    - target: {fileID: 3571282948742320244, guid: 79fd05e4814e063458a146f0a1d9a909, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c8a2af3089bd2db47bea5a6229542d3a, type: 3}
+    - target: {fileID: 3571282948742320244, guid: 79fd05e4814e063458a146f0a1d9a909, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5448770931234916566, guid: 79fd05e4814e063458a146f0a1d9a909, type: 3}
+      propertyPath: m_Size.x
+      value: 0.3011027
+      objectReference: {fileID: 0}
+    - target: {fileID: 5448770931234916566, guid: 79fd05e4814e063458a146f0a1d9a909, type: 3}
+      propertyPath: m_Size.y
+      value: 0.29358763
+      objectReference: {fileID: 0}
+    - target: {fileID: 5448770931234916566, guid: 79fd05e4814e063458a146f0a1d9a909, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.007515043
+      objectReference: {fileID: 0}
+    - target: {fileID: 5448770931234916566, guid: 79fd05e4814e063458a146f0a1d9a909, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.0037575066
+      objectReference: {fileID: 0}
+    - target: {fileID: 5448770931234916566, guid: 79fd05e4814e063458a146f0a1d9a909, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.x
+      value: 0.32
+      objectReference: {fileID: 0}
+    - target: {fileID: 5448770931234916566, guid: 79fd05e4814e063458a146f0a1d9a909, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.y
+      value: 0.32
+      objectReference: {fileID: 0}
+    - target: {fileID: 5448770931234916566, guid: 79fd05e4814e063458a146f0a1d9a909, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.32
+      objectReference: {fileID: 0}
+    - target: {fileID: 5448770931234916566, guid: 79fd05e4814e063458a146f0a1d9a909, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.32
+      objectReference: {fileID: 0}
+    - target: {fileID: 7911295189699653978, guid: 79fd05e4814e063458a146f0a1d9a909, type: 3}
+      propertyPath: prefab
+      value: 
+      objectReference: {fileID: 5569137733239705721, guid: 0ffc815d30639b043bc948923f7e0ed5, type: 3}
     - target: {fileID: 7911295189793259238, guid: 79fd05e4814e063458a146f0a1d9a909, type: 3}
       propertyPath: m_Name
-      value: Tower
+      value: Vpn
       objectReference: {fileID: 0}
     - target: {fileID: 7911295189793259243, guid: 79fd05e4814e063458a146f0a1d9a909, type: 3}
       propertyPath: m_RootOrder

@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 2560
     height: 1349
   m_ShowMode: 4
-  m_Title: Inspector
+  m_Title: Console
   m_RootView: {fileID: 9}
   m_MinSize: {x: 875, y: 350}
   m_MaxSize: {x: 10000, y: 10000}
@@ -101,7 +101,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 8096}
   vertical: 0
-  controlID: 96
+  controlID: 64
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -126,7 +126,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 200}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 0
-  controlID: 90
+  controlID: 17
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -300,7 +300,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 1
-  controlID: 95
+  controlID: 63
 --- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -325,7 +325,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 53
+  controlID: 47
 --- !u!114 &14
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -345,8 +345,8 @@ MonoBehaviour:
     y: 0
     width: 1509
     height: 761
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 18}
   m_Panes:
   - {fileID: 18}
@@ -407,7 +407,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: e8620000
     m_LastClickedID: 25320
-    m_ExpandedIDs: 00000000e2630000e4630000e6630000e8630000ea630000ec630000ee630000f0630000f2630000f4630000f6630000f8630000fa630000fc630000fe63000000640000026400000464000006640000086400000a6400000c6400000e64000010640000126400001464000016640000186400001a6400001c6400001e64000020640000226400002464000026640000286400002a6400002c640000
+    m_ExpandedIDs: 00000000d4630000d6630000d8630000da630000dc630000de630000e0630000e2630000e4630000e6630000e8630000ea630000ec630000ee630000f0630000f2630000f4630000f6630000f8630000fa630000fc630000fe63000000640000026400000464000006640000086400000a6400000c6400000e64000010640000126400001464000016640000186400001a6400001c6400001e6400002064000022640000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -432,21 +432,21 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_AssetTreeState:
-    scrollPos: {x: 0, y: 976}
+    scrollPos: {x: 0, y: 444}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: ffffffff00000000e2630000e4630000e6630000e8630000ea630000ec630000ee630000f0630000f4630000f6630000f8630000fa630000fc630000fe63000000640000026400000464000006640000086400000a6400000c6400000e64000010640000126400001464000016640000186400001a6400001c6400001e640000206400002464000026640000286400002a6400002c6400006e6400009064000098640000de770000
+    m_ExpandedIDs: ffffffff00000000d4630000d6630000d8630000da630000dc630000de630000e0630000e2630000e4630000e6630000e8630000ea630000ec630000ee630000f0630000f2630000f4630000f6630000f8630000fa630000fc630000fe63000000640000026400000464000006640000086400000a6400000c6400000e640000106400001264000016640000186400001a6400001c6400001e64000020640000226400007c640000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: ShopCanvas
-      m_OriginalName: ShopCanvas
+      m_Name: TimerControler
+      m_OriginalName: TimerControler
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 38532
+      m_UserData: 39252
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
       m_OriginalEventType: 0
@@ -563,20 +563,20 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 049bffff
-      m_LastClickedID: -25852
-      m_ExpandedIDs: 769affff889bffff0ceeffff2cfbffff78600000ec600000c29a0000f49a0000689b0000
+      m_SelectedIDs: 124affff
+      m_LastClickedID: 0
+      m_ExpandedIDs: 124affff164affff9ca7ffff9ea7ffffb4a7ffffb6a7ffff4ca8ffff4ea8ffff64a8ffff66a8ffff68a8ffff98aaffff30acffffbecbffffc4cbffffb0f0ffffb2f0ffffc8f0ffffcaf0ffff1af1ffff1cf1ffff38f1ffff92f7ffffd2f8ffffd6f8ffffd8f8ffff2cfbfffff664000058650000aa7e0000ba7e0000108f0000568f0000668f000052960000b2960000c8970000e29700002c9800003c98000040980000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: TowerDetails
-        m_OriginalName: TowerDetails
+        m_Name: Hp
+        m_OriginalName: Hp
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 39638
+        m_UserData: 38836
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
         m_OriginalEventType: 0
@@ -869,9 +869,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 406.805, y: 311.6909, z: -1.2597823}
+    m_Target: {x: 4.8815393, y: -0.6038009, z: -0.11658712}
     speed: 2
-    m_Value: {x: 409.83426, y: 310.4423, z: -1.2091295}
+    m_Value: {x: 4.8815393, y: -0.6038009, z: -0.11658712}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -922,9 +922,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 117.62838
+    m_Target: 9.572017
     speed: 2
-    m_Value: 112.56304
+    m_Value: 9.572017
   m_Ortho:
     m_Target: 1
     speed: 2

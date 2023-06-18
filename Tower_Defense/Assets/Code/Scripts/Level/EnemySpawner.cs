@@ -21,8 +21,7 @@ public class EnemySpawner : MonoBehaviour
     private int _enemiesSpawned;
     private int _currentWave;
     private bool _preparing = false;
-    private string _lastSpawned;    
-    private float _delayBtwWaves = 15f;
+    private string _lastSpawned;        
     private ObjectPooler[] _pooler;
 
     #endregion
@@ -35,31 +34,33 @@ public class EnemySpawner : MonoBehaviour
     
     void Update()
     {
-        _spawnerTimer -= Time.deltaTime;
-        if(_spawnerTimer < 0)
-        {
-            _spawnerTimer = delayBtwSpawns;
-            if(_enemiesSpawned < WaveEnemyCount)
-            {    
-                _enemiesSpawned++;                           
-                switch(SceneManager.GetActiveScene().name){
-                    case "Fase_1":
-                        SpawnerScene1();
-                        break;
-                    case "Fase_2":
-                        SpawnerScene2();
-                        break;
-                    case "Fase_3":
-                        SpawnerScene3();
-                        break;
-                }
-            }
-            else
+        if(_levelManager.GameStarted){
+            _spawnerTimer -= Time.deltaTime;
+            if(_spawnerTimer < 0)
             {
-                _enemiesSpawned = 0;
-                WaveEnemyCount = 0;                
-                if(!_preparing)
-                    PrepareNextWave().GetAwaiter();
+                _spawnerTimer = delayBtwSpawns;
+                if(_enemiesSpawned < WaveEnemyCount)
+                {    
+                    _enemiesSpawned++;                           
+                    switch(SceneManager.GetActiveScene().name){
+                        case "Fase_1":
+                            SpawnerScene1();
+                            break;
+                        case "Fase_2":
+                            SpawnerScene2();
+                            break;
+                        case "Fase_3":
+                            SpawnerScene3();
+                            break;
+                    }
+                }
+                else
+                {
+                    _enemiesSpawned = 0;
+                    WaveEnemyCount = 0;                
+                    if(!_preparing)
+                        PrepareNextWave().GetAwaiter();
+                }
             }
         }
     }
@@ -134,7 +135,7 @@ public class EnemySpawner : MonoBehaviour
 
     private IEnumerator SpawnEnemiesWithDelay(int enemyIndex = 1)
     {
-        int groupSize = 4;
+        int groupSize = Random.Range(1, 3);
         for (int i = 0; i < groupSize; i++)
         {
             SpawnEnemy(enemyIndex);

@@ -23,7 +23,7 @@ public class TowerProjectileController : MonoBehaviour
     void Update()
     {
         GetCurrentEnemyTarget();
-        if (CurrentEnemy != null && _tower.NumDDosEffects == 0 && CurrentEnemy.visible && !_levelManager.RamsomwareActive)
+        if (CurrentEnemy != null && _tower.NumDDosEffects == 0 && CurrentEnemy.visible)
             LoadProjectiles();
     }
 

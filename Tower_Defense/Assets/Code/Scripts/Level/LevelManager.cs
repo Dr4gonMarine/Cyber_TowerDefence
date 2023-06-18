@@ -13,14 +13,15 @@ public class LevelManager : MonoBehaviour
     [SerializeField] GameObject HpGameObject;
     HpController _hpController;
 
-    public bool RamsomwareActive;    
     public int CurrentWave { get; set; }
     public int NumberOfWaves { get; set; }
+    public bool GameStarted { get; set; }
+
     private TimerControler _timerControler;
 
     void Start()
-    {      
-        RamsomwareActive = false;                  
+    {     
+        GameStarted = false;                     
         CurrentWave = 1;
         shopManager = FindObjectOfType<TowerShopManager>();
         enemiesSpawner = FindObjectOfType<EnemySpawner>();
@@ -38,21 +39,14 @@ public class LevelManager : MonoBehaviour
             lives = 0;
             GameOver();
         }
+    }   
+    
+    public void StartGame()
+    {
+        GameStarted = true;        
     }
 
-    public void ActivateRamsomware()
-    {
-        RamsomwareActive = true;
-        StartCoroutine(TowersDesactivated());
-    }
-
-    private IEnumerator TowersDesactivated()
-    {
-        RamsomwareActive = true;
-        yield return new WaitForSeconds(15f);
-        RamsomwareActive = false;
-    }
-    void GameOver()
+    public void GameOver()
     {
         DefeatPanel.SetActive(true);
     }

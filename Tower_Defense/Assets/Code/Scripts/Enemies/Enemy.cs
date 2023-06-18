@@ -98,7 +98,7 @@ public class Enemy : MonoBehaviour
             _levelManager.LoseMoney(100);
         }else if(enemyDetails.name == "RansomWare")
         {
-            _levelManager.RamsomwareActive = true;
+            _levelManager.GameOver();
         }
     }
     #endregion

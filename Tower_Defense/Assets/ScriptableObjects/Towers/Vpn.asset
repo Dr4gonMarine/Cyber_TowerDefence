@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7aed2e6f84b4e004688ff63ebd56ee28, type: 3}
   m_Name: Vpn
   m_EditorClassIdentifier: 
-  TowerPrefab: {fileID: 0}
-  TowerShopCost: 0
-  TowerShopSprite: {fileID: 0}
-  FireRate: 0
-  Range: 0
-  SellPrice: 0
+  TowerPrefab: {fileID: 9069207532988402158, guid: a117c73573734a44e81e8471d4c49c79, type: 3}
+  TowerShopCost: 125
+  TowerShopSprite: {fileID: 21300000, guid: c8a2af3089bd2db47bea5a6229542d3a, type: 3}
+  FireRate: 3
+  Range: 3
+  SellPrice: 100
