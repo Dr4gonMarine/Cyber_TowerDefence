@@ -917,10 +917,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4175046701057156746, guid: dc2d2c7a26bd26341bd61789b231df4d, type: 3}
       propertyPath: m_text
-      value: "Durante essa fase ser\xE1 encontrado os inimigos:\n\n\u2022 <b>Spam:</b>
-        Envio de mensagens indesej\xE1veis que podem espalhar golpes ou infoma\xE7\xF5es
-        falsas\n\u2022 <b>DDos:</b> Ataque de nega\xE7\xE3o de servi\xE7os.\n\u2022
-        <b>RamsomWare:</b> Ataque de sequestro dados."
+      value: "Durante essa fase ser\xE3o encontrados os inimigos:\n\n\u2022 <b>Spam:</b>
+        envio de mensagens indesej\xE1veis que podem espalhar golpes ou infoma\xE7\xF5es
+        falsas\n\u2022 <b>DDos:</b> ataque de nega\xE7\xE3o de servi\xE7os.\n\u2022
+        <b>RamsomWare:</b> ataque de sequestro dados."
+      objectReference: {fileID: 0}
+    - target: {fileID: 4175046701057156746, guid: dc2d2c7a26bd26341bd61789b231df4d, type: 3}
+      propertyPath: m_fontSize
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 4175046701057156746, guid: dc2d2c7a26bd26341bd61789b231df4d, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 4175046701967792211, guid: dc2d2c7a26bd26341bd61789b231df4d, type: 3}
       propertyPath: m_Name

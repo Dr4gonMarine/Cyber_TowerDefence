@@ -917,8 +917,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4175046701057156746, guid: dc2d2c7a26bd26341bd61789b231df4d, type: 3}
       propertyPath: m_text
-      value: "Durante essa fase ser\xE1 encontrado os inimigos:\n\n\u2022 <b> Todos
-        os inimigos aparecer\xE3o</b>"
+      value: " <b>Todos os inimigos aparecer\xE3o</b>"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4175046701057156746, guid: dc2d2c7a26bd26341bd61789b231df4d, type: 3}
+      propertyPath: m_fontStyle
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4175046701057156746, guid: dc2d2c7a26bd26341bd61789b231df4d, type: 3}
+      propertyPath: m_VerticalAlignment
+      value: 512
+      objectReference: {fileID: 0}
+    - target: {fileID: 4175046701057156746, guid: dc2d2c7a26bd26341bd61789b231df4d, type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4175046701967792211, guid: dc2d2c7a26bd26341bd61789b231df4d, type: 3}
       propertyPath: m_Name
@@ -1310,6 +1321,9 @@ GameObject:
   - component: {fileID: 1675540571}
   - component: {fileID: 1675540572}
   - component: {fileID: 1675540573}
+  - component: {fileID: 1675540576}
+  - component: {fileID: 1675540575}
+  - component: {fileID: 1675540574}
   m_Layer: 0
   m_Name: Spawner
   m_TagString: Untagged
@@ -1330,7 +1344,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _levelManager: {fileID: 463519360}
-  WaveEnemyCount: 1
+  WaveEnemyCount: 5
   MaxWaves: 3
   delayBtwSpawns: 4
 --- !u!4 &1675540569
@@ -1389,6 +1403,48 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 2544218374463482686, guid: 991c9a61c7ee48f468cb47b085507261, type: 3}
+  poolSize: 10
+--- !u!114 &1675540574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1675540567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82ec24fa41be4984d9e207f6a3c07adb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 529927416585908356, guid: b2c25e852f2a2a2479758e683588e791, type: 3}
+  poolSize: 10
+--- !u!114 &1675540575
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1675540567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82ec24fa41be4984d9e207f6a3c07adb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 3088828031509322322, guid: 7b5ca7485e3414f42b3130a70cb7e482, type: 3}
+  poolSize: 10
+--- !u!114 &1675540576
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1675540567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82ec24fa41be4984d9e207f6a3c07adb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 8445707856577062014, guid: 1d373e3deed51804a94068be7d0381da, type: 3}
   poolSize: 10
 --- !u!4 &1760827929 stripped
 Transform:
@@ -1608,14 +1664,22 @@ PrefabInstance:
       objectReference: {fileID: 601258347}
     - target: {fileID: 1289662471370478998, guid: d0143091b22beaf40bfc0e91a1a20d79, type: 3}
       propertyPath: Towers.Array.size
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1289662471370478998, guid: d0143091b22beaf40bfc0e91a1a20d79, type: 3}
       propertyPath: Towers.Array.data[0]
       value: 
-      objectReference: {fileID: 11400000, guid: 17e7b2ba4ba342f428373e40324cc453, type: 2}
+      objectReference: {fileID: 11400000, guid: 6095e1835759d4341b04d67f7e59b7e5, type: 2}
     - target: {fileID: 1289662471370478998, guid: d0143091b22beaf40bfc0e91a1a20d79, type: 3}
       propertyPath: Towers.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: b35fb40883ef11f40a79d6b0c191d11e, type: 2}
+    - target: {fileID: 1289662471370478998, guid: d0143091b22beaf40bfc0e91a1a20d79, type: 3}
+      propertyPath: Towers.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: 17e7b2ba4ba342f428373e40324cc453, type: 2}
+    - target: {fileID: 1289662471370478998, guid: d0143091b22beaf40bfc0e91a1a20d79, type: 3}
+      propertyPath: Towers.Array.data[3]
       value: 
       objectReference: {fileID: 11400000, guid: 8aa13f97390fb1049908405cecae7880, type: 2}
     m_RemovedComponents: []

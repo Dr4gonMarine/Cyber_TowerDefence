@@ -34,12 +34,14 @@ public class Tower : MonoBehaviour
 
     public void AddDDosEffect()
     {
-        NumDDosEffects++;
+        if(_towerSettings.TowerPrefab.name != "Vpn")
+            NumDDosEffects++;
     }
 
     public void RemoveDDosEffect()
     {
-        NumDDosEffects--;
+        if(NumDDosEffects > 0)
+            NumDDosEffects--;
     }
 
     //void RotateTowardsTarget()

@@ -102,7 +102,7 @@ PrefabInstance:
     - target: {fileID: 182267875538998957, guid: 2b36f0c5163e1994baf90691303e3210, type: 3}
       propertyPath: m_fontAsset
       value: 
-      objectReference: {fileID: 11400000, guid: 0161d805a3764c089bef00bfe00793f5, type: 2}
+      objectReference: {fileID: 11400000, guid: 81bcb7f1320c93447bcec552b40b6e04, type: 2}
     - target: {fileID: 182267875538998957, guid: 2b36f0c5163e1994baf90691303e3210, type: 3}
       propertyPath: m_fontSizeBase
       value: 20
@@ -110,10 +110,10 @@ PrefabInstance:
     - target: {fileID: 182267875538998957, guid: 2b36f0c5163e1994baf90691303e3210, type: 3}
       propertyPath: m_sharedMaterial
       value: 
-      objectReference: {fileID: 2147374, guid: 0161d805a3764c089bef00bfe00793f5, type: 2}
+      objectReference: {fileID: 2840283652233734569, guid: 81bcb7f1320c93447bcec552b40b6e04, type: 2}
     - target: {fileID: 7063380322848286968, guid: 2b36f0c5163e1994baf90691303e3210, type: 3}
       propertyPath: m_Name
-      value: SmallerDefaultButton
+      value: SmallerDefaultButton Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2b36f0c5163e1994baf90691303e3210, type: 3}

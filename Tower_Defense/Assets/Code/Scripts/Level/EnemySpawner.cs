@@ -27,7 +27,7 @@ public class EnemySpawner : MonoBehaviour
     #endregion
     void Start()
     {
-        _currentWave = 2;
+        _currentWave = 1;
         _pooler = GetComponents<ObjectPooler>();               
     }
 
@@ -51,6 +51,9 @@ public class EnemySpawner : MonoBehaviour
                             break;
                         case "Fase_3":
                             SpawnerScene3();
+                            break;
+                        case "Fase_4":
+                            SpawnerScene4();
                             break;
                     }
                 }
@@ -131,6 +134,11 @@ public class EnemySpawner : MonoBehaviour
                 SpawnEnemy(Random.Range(0, _pooler.Length));
                 break;            
         }     
+    }
+
+    private void SpawnerScene4()
+    {
+        SpawnEnemy(Random.Range(0, _pooler.Length));
     }
 
     private IEnumerator SpawnEnemiesWithDelay(int enemyIndex = 1)

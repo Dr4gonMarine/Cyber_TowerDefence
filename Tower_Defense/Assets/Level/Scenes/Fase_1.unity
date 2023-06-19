@@ -1617,14 +1617,22 @@ PrefabInstance:
       objectReference: {fileID: 463519360}
     - target: {fileID: 4175046701057156746, guid: dc2d2c7a26bd26341bd61789b231df4d, type: 3}
       propertyPath: m_text
-      value: "Durante essa fase ser\xE1 encontrado os inimigos:\n\n\u2022 <b>Malware:</b>
-        virus comum de computador.\n\u2022 <b>Cavalo de Troia:</b> um tipo de virus
-        especialista em se esconder em outros arquivos sendo mais dif\xEDcil de ser
-        encontrado pelas defesas"
+      value: "Durante essa fase ser\xE3o encontrados os inimigos:\n\n\u2022 <b>V\xEDrus:</b>
+        v\xEDrus comum de computador.\n\u2022 <b>Cavalo de Tr\xF3ia:</b> um tipo
+        de v\xEDrus especialista em se esconder em outros arquivos, sendo mais dif\xEDcil
+        de ser encontrado pelas defesas."
+      objectReference: {fileID: 0}
+    - target: {fileID: 4175046701057156746, guid: dc2d2c7a26bd26341bd61789b231df4d, type: 3}
+      propertyPath: m_fontSize
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 4175046701057156746, guid: dc2d2c7a26bd26341bd61789b231df4d, type: 3}
       propertyPath: m_fontStyle
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4175046701057156746, guid: dc2d2c7a26bd26341bd61789b231df4d, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 4175046701967792211, guid: dc2d2c7a26bd26341bd61789b231df4d, type: 3}
       propertyPath: m_Name
