@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Phishing
   m_EditorClassIdentifier: 
   enemyName: Phishing
-  moveSpeed: 4
+  moveSpeed: 3.2
   maxHealth: 45
   moneyDrop: 10
   enemySprite: {fileID: 21300000, guid: 326918bdd4142404082ae5d5b5e344f0, type: 3}

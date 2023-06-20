@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: FireWall
   m_EditorClassIdentifier: 
   TowerPrefab: {fileID: 6575360516439718519, guid: aa158195f43fcc64ab5ae80182a4572b, type: 3}
-  TowerShopCost: 300
+  TowerShopCost: 250
   TowerShopSprite: {fileID: 21300000, guid: 118d2d9565d926141a6fc4e260f92f4c, type: 3}
   FireRate: 5
   Range: 1

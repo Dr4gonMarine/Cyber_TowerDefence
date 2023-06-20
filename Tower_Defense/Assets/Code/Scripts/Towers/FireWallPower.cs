@@ -15,7 +15,7 @@ public class FireWallPower : MonoBehaviour
             {
                inimigo.visible = true;
             }
-            inimigo.MoveSpeed = inimigo.MoveSpeed / 2;
+            inimigo.MoveSpeed = inimigo.MoveSpeed / 1.5f;
         }
     } 
     private void OnTriggerExit2D(Collider2D collision)
@@ -23,7 +23,7 @@ public class FireWallPower : MonoBehaviour
         if (collision.CompareTag("Enemy"))
         {
             var inimigo = collision.GetComponent<Enemy>();
-            inimigo.MoveSpeed = inimigo.MoveSpeed * 2;
+            inimigo.MoveSpeed = inimigo.MoveSpeed * 1.5f;
         }
     }  
 }

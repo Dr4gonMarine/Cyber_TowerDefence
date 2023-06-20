@@ -10,24 +10,20 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] private LevelManager _levelManager;
 
     [Header("Configuracoes")]
-    public int WaveEnemyCount = 10;   
-    public int MaxWaves = 3;   
-
+    public int WaveEnemyCount = 10;       
     [Header("Delay")]
     [SerializeField] private float delayBtwSpawns;
 
 
     private float _spawnerTimer;
     private int _enemiesSpawned;
-    private int _currentWave;
     private bool _preparing = false;
     private string _lastSpawned;        
     private ObjectPooler[] _pooler;
 
     #endregion
     void Start()
-    {
-        _currentWave = 1;
+    {        
         _pooler = GetComponents<ObjectPooler>();               
     }
 
@@ -41,6 +37,7 @@ public class EnemySpawner : MonoBehaviour
                 _spawnerTimer = delayBtwSpawns;
                 if(_enemiesSpawned < WaveEnemyCount)
                 {    
+                    _levelManager.EnemySpawned();
                     _enemiesSpawned++;                           
                     switch(SceneManager.GetActiveScene().name){
                         case "Fase_1":
@@ -63,13 +60,14 @@ public class EnemySpawner : MonoBehaviour
                     WaveEnemyCount = 0;                
                     if(!_preparing)
                         PrepareNextWave().GetAwaiter();
+                    
                 }
             }
         }
     }
 
     private void SpawnerScene1(){
-        switch(_currentWave){
+        switch(_levelManager.CurrentWave){
             case 1:
                 SpawnEnemy(0);
                 break;
@@ -89,7 +87,7 @@ public class EnemySpawner : MonoBehaviour
         
     }
      private void SpawnerScene2(){
-          switch(_currentWave){
+          switch(_levelManager.CurrentWave){
             case 1:
                 SpawnEnemy(0);
                 break;
@@ -113,7 +111,7 @@ public class EnemySpawner : MonoBehaviour
     }
      private void SpawnerScene3(){
 
-         switch(_currentWave){
+         switch(_levelManager.CurrentWave){
             case 1:
                 StartCoroutine(SpawnEnemiesWithDelay(0));
                 break;
@@ -153,17 +151,14 @@ public class EnemySpawner : MonoBehaviour
 
     async Task PrepareNextWave()
     {
-        if(_currentWave < MaxWaves)
+        if(_levelManager.CurrentWave < _levelManager.MaxWaves)
         {
             _preparing = true;
             _levelManager.WaveCompleted(); 
             await Task.Delay(15000);
-            _currentWave++;
+            _levelManager.CurrentWave++;
             WaveEnemyCount = 10;
             _preparing = false;
-        }else{
-            _levelManager.Victory();
-            Debug.Log("Fim de jogo");
         }
     }
 

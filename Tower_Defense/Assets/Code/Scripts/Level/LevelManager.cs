@@ -14,10 +14,12 @@ public class LevelManager : MonoBehaviour
     HpController _hpController;
 
     public int CurrentWave { get; set; }
-    public int NumberOfWaves { get; set; }
+    public int MaxWaves = 3;
     public bool GameStarted { get; set; }
 
     private TimerControler _timerControler;
+    private int _enemiesOnline = 0;
+    private bool _lost = false;
 
     void Start()
     {     
@@ -48,7 +50,21 @@ public class LevelManager : MonoBehaviour
 
     public void GameOver()
     {
+        _lost = true;
         DefeatPanel.SetActive(true);
+    }
+
+    public void EnemyConcluded()
+    {
+        _enemiesOnline--;
+        if(_enemiesOnline <= 0 && CurrentWave == MaxWaves && !_lost)
+            Victory();
+        
+    }
+
+    public void EnemySpawned()
+    {
+        _enemiesOnline++;
     }
 
     public void Victory()

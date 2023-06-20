@@ -92,11 +92,12 @@ public class Enemy : MonoBehaviour
         ObjectPooler.RetunToPool(gameObject);
 
         _levelManager.ReduceLives();
+        _levelManager.EnemyConcluded();
 
         if(enemyDetails.name == "Phishing")
         {
             _levelManager.LoseMoney(100);
-        }else if(enemyDetails.name == "RansomWare")
+        }else if(enemyDetails.name == "RamsomWare")
         {
             _levelManager.GameOver();
         }
@@ -130,6 +131,7 @@ public class Enemy : MonoBehaviour
         _nextLocation = _waypoints.Points[0];
         ResetHealthBar();
         _levelManager.GetMoney(enemyDetails.moneyDrop);
+        _levelManager.EnemyConcluded();
         ObjectPooler.RetunToPool(gameObject);        
     }
 
