@@ -136,16 +136,20 @@ public class EnemySpawner : MonoBehaviour
 
     private void SpawnerScene4()
     {
-        SpawnEnemy(Random.Range(0, _pooler.Length));
+        int index = Random.Range(0, _pooler.Length); 
+        if (index == 0)
+            StartCoroutine(SpawnEnemiesWithDelay(0));
+        else
+            SpawnEnemy(index);
     }
 
     private IEnumerator SpawnEnemiesWithDelay(int enemyIndex = 1)
     {
-        int groupSize = Random.Range(1, 3);
+        int groupSize = Random.Range(1, 5);
         for (int i = 0; i < groupSize; i++)
         {
             SpawnEnemy(enemyIndex);
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(0.7f);
         }
     }
 

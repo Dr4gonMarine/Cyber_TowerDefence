@@ -16,5 +16,5 @@ MonoBehaviour:
   TowerShopCost: 125
   TowerShopSprite: {fileID: 21300000, guid: c8a2af3089bd2db47bea5a6229542d3a, type: 3}
   FireRate: 3
-  Range: 3
+  Range: 2.5
   SellPrice: 100

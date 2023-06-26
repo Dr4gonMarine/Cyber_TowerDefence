@@ -15,5 +15,5 @@ MonoBehaviour:
   enemyName: DDos
   moveSpeed: 0.8
   maxHealth: 50
-  moneyDrop: 100
+  moneyDrop: 75
   enemySprite: {fileID: 21300000, guid: a46f94744d34f364588eeb5795a48d32, type: 3}

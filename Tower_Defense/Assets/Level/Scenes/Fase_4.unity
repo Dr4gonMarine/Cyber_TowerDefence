@@ -2499,8 +2499,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _levelManager: {fileID: 463519360}
   WaveEnemyCount: 5
-  MaxWaves: 3
-  delayBtwSpawns: 4
+  delayBtwSpawns: 5
 --- !u!4 &1675540569
 Transform:
   m_ObjectHideFlags: 0
@@ -2802,7 +2801,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1289662471370478998, guid: d0143091b22beaf40bfc0e91a1a20d79, type: 3}
       propertyPath: Money
-      value: 500
+      value: 400
       objectReference: {fileID: 0}
     - target: {fileID: 1289662471370478998, guid: d0143091b22beaf40bfc0e91a1a20d79, type: 3}
       propertyPath: UiMoney

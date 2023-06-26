@@ -1883,7 +1883,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5947847888326568922, guid: f0fd951f829c26f47a7b460775df1798, type: 3}
       propertyPath: m_text
-      value: RamsomWare
+      value: RansomWare
       objectReference: {fileID: 0}
     - target: {fileID: 6230632214894806932, guid: f0fd951f829c26f47a7b460775df1798, type: 3}
       propertyPath: m_Sprite
