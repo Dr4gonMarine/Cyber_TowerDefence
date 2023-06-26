@@ -35,7 +35,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 3.2814026, y: -4.399994}
+  m_AnchoredPosition: {x: 3.281372, y: -4.399994}
   m_SizeDelta: {x: -396.3195, y: -236.7229}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7385336377307877201
@@ -144,8 +144,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Title
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 81bcb7f1320c93447bcec552b40b6e04, type: 2}
-  m_sharedMaterial: {fileID: 2840283652233734569, guid: 81bcb7f1320c93447bcec552b40b6e04, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 988aec3666d3542409af6e183333525d, type: 2}
+  m_sharedMaterial: {fileID: -460627681979224562, guid: 988aec3666d3542409af6e183333525d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -427,6 +427,14 @@ PrefabInstance:
       propertyPath: m_text
       value: New Text
       objectReference: {fileID: 0}
+    - target: {fileID: 8181241816949741126, guid: cdc586f6f36ac64488fd31138fe14514, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 988aec3666d3542409af6e183333525d, type: 2}
+    - target: {fileID: 8181241816949741126, guid: cdc586f6f36ac64488fd31138fe14514, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -460627681979224562, guid: 988aec3666d3542409af6e183333525d, type: 2}
     - target: {fileID: 8885326635307164249, guid: cdc586f6f36ac64488fd31138fe14514, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -541,6 +549,14 @@ PrefabInstance:
       propertyPath: m_text
       value: New Text
       objectReference: {fileID: 0}
+    - target: {fileID: 8181241816949741126, guid: cdc586f6f36ac64488fd31138fe14514, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 988aec3666d3542409af6e183333525d, type: 2}
+    - target: {fileID: 8181241816949741126, guid: cdc586f6f36ac64488fd31138fe14514, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -460627681979224562, guid: 988aec3666d3542409af6e183333525d, type: 2}
     - target: {fileID: 8885326635307164249, guid: cdc586f6f36ac64488fd31138fe14514, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 5

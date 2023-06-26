@@ -19,6 +19,7 @@ public class Enemy : MonoBehaviour
     Vector3 _nextLocation;     
     public bool visible = true;
     [HideInInspector] public float MoveSpeed;
+    private SimpleFlash _simpleFlash;
 
     void Start()
     {
@@ -29,6 +30,7 @@ public class Enemy : MonoBehaviour
         _waypoints = FindObjectOfType<WayPoint>();
         _levelManager = FindObjectOfType<LevelManager>();         
         _healthBar = GetComponentInChildren<Image>();
+        _simpleFlash = GetComponent<SimpleFlash>();
 
         _nextLocation = _waypoints.Points[_passedPoints];
     }   
@@ -108,6 +110,7 @@ public class Enemy : MonoBehaviour
     #region EnemyHP
     public void TakeDamage(float damageReceived)
     {
+        _simpleFlash.Flash();
         _currentHealth -= damageReceived;
         if (_currentHealth <= 0)
         {
