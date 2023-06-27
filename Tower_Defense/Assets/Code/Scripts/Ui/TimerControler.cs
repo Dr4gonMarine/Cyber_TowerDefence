@@ -6,16 +6,18 @@ using UnityEngine;
 public class TimerControler : MonoBehaviour
 {
     private TextMeshProUGUI timerText;
+    private GameObject timerTitle;
     public float timeRemaining = 0f;
     void Awake()
     {
-        timerText = GetComponent<TextMeshProUGUI>();
-        timerText.text = "teste";
+        timerText = GetComponent<TextMeshProUGUI>();       
+        timerTitle = transform.GetChild(0).gameObject;
     }
   
     public void StartTimer(float time)
     {
         timeRemaining = time;
+        timerTitle.SetActive(true);
         StartCoroutine(CountdownCoroutine());
     }
     private IEnumerator CountdownCoroutine()
@@ -29,5 +31,6 @@ public class TimerControler : MonoBehaviour
 
         //set actvie false
         timerText.text = "";  
+        timerTitle.SetActive(false);
     }
 }

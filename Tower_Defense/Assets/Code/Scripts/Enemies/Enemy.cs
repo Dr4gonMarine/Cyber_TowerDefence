@@ -129,7 +129,8 @@ public class Enemy : MonoBehaviour
     }
 
     public void Die()
-    {
+    {        
+        _simpleFlash.StopFlash();        
         _passedPoints = 0;
         _nextLocation = _waypoints.Points[0];
         ResetHealthBar();

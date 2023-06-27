@@ -61,7 +61,10 @@ public class SimpleFlash : MonoBehaviour
         // Start the Coroutine, and store the reference for it.
         flashRoutine = StartCoroutine(FlashRoutine());
     }
-
+    public void StopFlash(){
+        StopCoroutine(flashRoutine);
+        spriteRenderer.material = originalMaterial;
+    }
     private IEnumerator FlashRoutine()
     {
         // Swap to the flashMaterial.
