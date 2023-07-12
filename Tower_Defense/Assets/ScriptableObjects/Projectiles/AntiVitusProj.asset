@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8df6069aa80be58479f9cc4fdbf9a0f6, type: 3}
   m_Name: AntiVitusProj
   m_EditorClassIdentifier: 
-  Damage: 35
+  Damage: 20
   MoveSpeed: 3

@@ -1945,10 +1945,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4175046701057156746, guid: dc2d2c7a26bd26341bd61789b231df4d, type: 3}
       propertyPath: m_text
-      value: "Durante essa fase ser\xE3o encontrados os inimigos:\n\n\u2022<b> Phishing:</b>
-        m\xE9todo de engenharia social  de roubo de dados.\n\u2022 <b>Spam: </b>envio
-        de mensagens indesej\xE1veis que podem espalhar golpes ou infoma\xE7\xF5es
-        falsas."
+      value: "Durante essa fase ser\xE3o encontrados os inimigos:\n\n<color=#dd0000><b>\u2022
+        Phishing:</b></color> m\xE9todo de engenharia social de roubo de dados. <b><u>-
+        S\xE3o r\xE1pidos e, ao chegarem ao final, roubam dinheiro.\r</b></u>\n<color=#dd0000><b>\u2022
+        Spam:</b></color> envio massivo de mensagens indesej\xE1veis que podem espalhar
+        golpes ou informa\xE7\xF5es falsas. <b><u> Faz com que v\xE1rios inimigos
+        apare\xE7am juntos.</b></u>\n\n--------------------------------------------------------------------------------------------------\n\n<color=#00aa00>\u2022
+        <b>FireWall:</b> </color> <b>- <u>Permite a vis\xE3o do <color=#dd0000>Cavalo
+        de tr\xF3ia</color> e diminui a velocidade de todos os inimigos.</b></u>\n<b><color=#00aa00>\u2022
+        Autentica\xE7\xE3o de 2 Fatores:</color></b> um m\xE9todo de seguran\xE7a
+        que combina duas formas de comprova\xE7\xE3o de identidade para acessar contas
+        ou sistemas.  <b><u>- Impede o <color=#dd0000>Phishing</color> de roubar
+        dinheiro.</u>"
       objectReference: {fileID: 0}
     - target: {fileID: 4175046701057156746, guid: dc2d2c7a26bd26341bd61789b231df4d, type: 3}
       propertyPath: m_fontSize
@@ -2327,11 +2335,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4540185723206727632, guid: e6b2c8cd051fe2f4cb0089e3ae19bc0c, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -39.6
+      value: -37.3
       objectReference: {fileID: 0}
     - target: {fileID: 4540185723206727632, guid: e6b2c8cd051fe2f4cb0089e3ae19bc0c, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 21.04
+      value: 7.89
       objectReference: {fileID: 0}
     - target: {fileID: 4540185723206727633, guid: e6b2c8cd051fe2f4cb0089e3ae19bc0c, type: 3}
       propertyPath: shop
@@ -2938,6 +2946,18 @@ PrefabInstance:
     - target: {fileID: 6915017723529063571, guid: aa3eda106641f5741b49e294dc8ec881, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7916476849463976371, guid: aa3eda106641f5741b49e294dc8ec881, type: 3}
+      propertyPath: m_Color.b
+      value: 0.27058825
+      objectReference: {fileID: 0}
+    - target: {fileID: 7916476849463976371, guid: aa3eda106641f5741b49e294dc8ec881, type: 3}
+      propertyPath: m_Color.g
+      value: 0.75686276
+      objectReference: {fileID: 0}
+    - target: {fileID: 7916476849463976371, guid: aa3eda106641f5741b49e294dc8ec881, type: 3}
+      propertyPath: m_Color.r
+      value: 0.37254903
       objectReference: {fileID: 0}
     - target: {fileID: 8145818229621240023, guid: aa3eda106641f5741b49e294dc8ec881, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target

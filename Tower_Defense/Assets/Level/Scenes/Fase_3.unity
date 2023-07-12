@@ -962,10 +962,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4175046701057156746, guid: dc2d2c7a26bd26341bd61789b231df4d, type: 3}
       propertyPath: m_text
-      value: "Durante essa fase ser\xE3o encontrados os inimigos:\n\n\u2022 <b>Spam:</b>
-        envio de mensagens indesej\xE1veis que podem espalhar golpes ou infoma\xE7\xF5es
-        falsas\n\u2022 <b>DDos:</b> ataque de nega\xE7\xE3o de servi\xE7os.\n\u2022
-        <b>RansomWare:</b> ataque de sequestro dados."
+      value: "Durante essa fase ser\xE3o encontrados os inimigos:\n\n<color=#dd0000><b>\u2022
+        Spam:</b></color><b><u>- Faz com que v\xE1rios inimigos apare\xE7am juntos;</b></u>\n<color=#dd0000><b>\u2022
+        DDos:</b></color> ataque de nega\xE7\xE3o de servi\xE7os. <b><u>- Torres
+        dentro do seu raio s\xE3o desligadas;</b></u>\n<color=#dd0000><b>\u2022 Ransomware:</b></color>
+        ataque de sequestro dados. <b><u>- Ao chegar ao final, perde imediatamente;</b></u>\n\n----------------------------------------------------------------------------------------------------\n<color=#00aa00>\u2022
+        <b>Antivirus:</b> </color> <b>- <u>Apenas ataca; </b></u>\n<color=#00aa00>\u2022
+        <b>FireWall:</b> </color> <b>- <u>Permite a vis\xE3o do <color=#dd0000>Cavalo
+        de tr\xF3ia</color> e diminui a velocidade de todos os inimigos;</b></u>\n<color=#00aa00><b>\u2022
+        VPN:</b></color> tecnologia que estabelece uma conex\xE3o segura e criptografada
+        entre um dispositivo e uma rede privada pela internet <b><u>- Imune ao <color=#dd0000>DDos</color>
+        e grande raio de ataque;</b></u>"
       objectReference: {fileID: 0}
     - target: {fileID: 4175046701057156746, guid: dc2d2c7a26bd26341bd61789b231df4d, type: 3}
       propertyPath: m_fontSize
@@ -3164,7 +3171,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1289662471370478998, guid: d0143091b22beaf40bfc0e91a1a20d79, type: 3}
       propertyPath: Money
-      value: 350
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 1289662471370478998, guid: d0143091b22beaf40bfc0e91a1a20d79, type: 3}
       propertyPath: UiMoney
@@ -3180,7 +3187,7 @@ PrefabInstance:
       objectReference: {fileID: 601258347}
     - target: {fileID: 1289662471370478998, guid: d0143091b22beaf40bfc0e91a1a20d79, type: 3}
       propertyPath: Towers.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1289662471370478998, guid: d0143091b22beaf40bfc0e91a1a20d79, type: 3}
       propertyPath: Towers.Array.data[0]
@@ -3190,6 +3197,10 @@ PrefabInstance:
       propertyPath: Towers.Array.data[1]
       value: 
       objectReference: {fileID: 11400000, guid: 8aa13f97390fb1049908405cecae7880, type: 2}
+    - target: {fileID: 1289662471370478998, guid: d0143091b22beaf40bfc0e91a1a20d79, type: 3}
+      propertyPath: Towers.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: 6095e1835759d4341b04d67f7e59b7e5, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d0143091b22beaf40bfc0e91a1a20d79, type: 3}
 --- !u!1001 &2434462477402170568
@@ -3302,6 +3313,18 @@ PrefabInstance:
     - target: {fileID: 6915017723529063571, guid: aa3eda106641f5741b49e294dc8ec881, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7916476849463976371, guid: aa3eda106641f5741b49e294dc8ec881, type: 3}
+      propertyPath: m_Color.b
+      value: 0.27058825
+      objectReference: {fileID: 0}
+    - target: {fileID: 7916476849463976371, guid: aa3eda106641f5741b49e294dc8ec881, type: 3}
+      propertyPath: m_Color.g
+      value: 0.75686276
+      objectReference: {fileID: 0}
+    - target: {fileID: 7916476849463976371, guid: aa3eda106641f5741b49e294dc8ec881, type: 3}
+      propertyPath: m_Color.r
+      value: 0.37254903
       objectReference: {fileID: 0}
     - target: {fileID: 8145818229621240023, guid: aa3eda106641f5741b49e294dc8ec881, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target

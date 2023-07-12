@@ -10,15 +10,18 @@ public class TowerProjectileController : MonoBehaviour
 
     Enemy CurrentEnemy;
     [SerializeField] List<Enemy> _enemiesInRange;
+    [SerializeField] ShootingEffect _shootongEffect;
 
     protected float _nextAttkTime;
-    Projectile _currentProjectileLoaded;
+    Projectile _currentProjectileLoaded;    
 
     private void Awake()
     {
         _levelManager = FindObjectOfType<LevelManager>();
         _tower = GetComponentInParent<Tower>();
         _pool = GetComponent<ObjectPooler>();
+        //get the particle system in parent
+        
     }
     void Update()
     {
@@ -75,6 +78,7 @@ public class TowerProjectileController : MonoBehaviour
             _currentProjectileLoaded.transform.position = transform.position;
             _currentProjectileLoaded._enemyTarget = GetCurrentEnemyTarget();
             _nextAttkTime = Time.time + _tower.FireRate;
+            _shootongEffect.EmitParticles();
         }
     }
 }

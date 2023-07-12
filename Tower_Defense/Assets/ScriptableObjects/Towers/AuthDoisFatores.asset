@@ -15,6 +15,6 @@ MonoBehaviour:
   TowerPrefab: {fileID: 723152490160768348, guid: 9ae7d834077a237488cbb5c068d47806, type: 3}
   TowerShopCost: 175
   TowerShopSprite: {fileID: 21300000, guid: d5ac506b35cab0f48be04fbd441aa36d, type: 3}
-  FireRate: 1.5
-  Range: 3.5
+  FireRate: 0.6
+  Range: 1
   SellPrice: 150

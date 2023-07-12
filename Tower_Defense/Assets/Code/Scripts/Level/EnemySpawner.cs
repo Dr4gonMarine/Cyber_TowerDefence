@@ -145,9 +145,11 @@ public class EnemySpawner : MonoBehaviour
 
     private IEnumerator SpawnEnemiesWithDelay(int enemyIndex = 1)
     {
+        _levelManager.OneLessEnemy();
         int groupSize = Random.Range(1, 5);
         for (int i = 0; i < groupSize; i++)
         {
+            _levelManager.EnemySpawned();
             SpawnEnemy(enemyIndex);
             yield return new WaitForSeconds(0.7f);
         }

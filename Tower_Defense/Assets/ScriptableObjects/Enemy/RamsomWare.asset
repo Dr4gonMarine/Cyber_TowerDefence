@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyName: RamsomWare
   moveSpeed: 1
-  maxHealth: 200
+  maxHealth: 175
   moneyDrop: 100
   enemySprite: {fileID: 21300000, guid: 0381e83699c572141b829126f1e0f62f, type: 3}

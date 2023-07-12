@@ -2324,7 +2324,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _levelManager: {fileID: 463519360}
   WaveEnemyCount: 10
-  MaxWaves: 3
   delayBtwSpawns: 4
 --- !u!4 &1675540569
 Transform:
@@ -2749,6 +2748,18 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7916476849463976371, guid: aa3eda106641f5741b49e294dc8ec881, type: 3}
+      propertyPath: m_Color.b
+      value: 0.27058825
+      objectReference: {fileID: 0}
+    - target: {fileID: 7916476849463976371, guid: aa3eda106641f5741b49e294dc8ec881, type: 3}
+      propertyPath: m_Color.g
+      value: 0.75686276
+      objectReference: {fileID: 0}
+    - target: {fileID: 7916476849463976371, guid: aa3eda106641f5741b49e294dc8ec881, type: 3}
+      propertyPath: m_Color.r
+      value: 0.37254903
+      objectReference: {fileID: 0}
     - target: {fileID: 8145818229621240023, guid: aa3eda106641f5741b49e294dc8ec881, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -2812,11 +2823,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4175046701049858556, guid: dc2d2c7a26bd26341bd61789b231df4d, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 750
+      value: 950
       objectReference: {fileID: 0}
     - target: {fileID: 4175046701049858556, guid: dc2d2c7a26bd26341bd61789b231df4d, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 450
+      value: 569
       objectReference: {fileID: 0}
     - target: {fileID: 4175046701049858556, guid: dc2d2c7a26bd26341bd61789b231df4d, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -2826,12 +2837,34 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4175046701049858557, guid: dc2d2c7a26bd26341bd61789b231df4d, type: 3}
+      propertyPath: m_Color.a
+      value: 0.9019608
+      objectReference: {fileID: 0}
+    - target: {fileID: 4175046701049858557, guid: dc2d2c7a26bd26341bd61789b231df4d, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4175046701049858557, guid: dc2d2c7a26bd26341bd61789b231df4d, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4175046701049858557, guid: dc2d2c7a26bd26341bd61789b231df4d, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4175046701057156746, guid: dc2d2c7a26bd26341bd61789b231df4d, type: 3}
       propertyPath: m_text
-      value: "Durante essa fase ser\xE3o encontrados os inimigos:\n\n\u2022 <b>V\xEDrus:</b>
-        v\xEDrus comum de computador.\n\u2022 <b>Cavalo de Tr\xF3ia:</b> um tipo
-        de v\xEDrus especialista em se esconder em outros arquivos, sendo mais dif\xEDcil
-        de ser encontrado pelas defesas."
+      value: "Durante essa fase ser\xE3o encontrados os inimigos:\n\n<color=#dd0000>\u2022
+        <b>V\xEDrus:</b> </color> v\xEDrus comum de computador. <b>- <u>N\xE3o possui
+        Habilidades; </b></u>\n<color=#dd0000>\u2022 <b>Cavalo de Tr\xF3ia:</b> </color>
+        um tipo de v\xEDrus especialista em se esconder em outros arquivos.<b>- <u>S\xF3
+        pode ser visto dentro raio do <color=#00aa00>FireWall; </b></u></color>\n\n---------------------------------------------------------------------------------------------------\n\n<color=#00aa00>\u2022
+        <b>Antivirus:</b> </color> antivirus comum. <b>- <u>Apenas ataca; </b></u>\n<color=#00aa00>\u2022
+        <b>FireWall</b> </color> medida de seguran\xE7a que protege redes de computadores,
+        controlando o tr\xE1fego de informa\xE7\xF5es e filtrando conex\xF5es indesejadas.
+        <b>- <u>Permite a vis\xE3o do <color=#dd0000>Cavalo de tr\xF3ia</color> e
+        diminui a velocidade de todos os inimigos.</b></u>\n\n"
       objectReference: {fileID: 0}
     - target: {fileID: 4175046701057156746, guid: dc2d2c7a26bd26341bd61789b231df4d, type: 3}
       propertyPath: m_fontSize

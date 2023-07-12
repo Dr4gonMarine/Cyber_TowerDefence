@@ -62,6 +62,11 @@ public class LevelManager : MonoBehaviour
         
     }
 
+    public void OneLessEnemy()
+    {
+        _enemiesOnline--;               
+    }
+
     public void EnemySpawned()
     {
         _enemiesOnline++;

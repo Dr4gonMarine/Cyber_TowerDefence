@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Projectile_Auth
   m_EditorClassIdentifier: 
   Damage: 10
-  MoveSpeed: 3.5
+  MoveSpeed: 6
